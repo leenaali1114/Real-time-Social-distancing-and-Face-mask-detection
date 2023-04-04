@@ -9,6 +9,8 @@ import math
 from modules.detection import detect_people
 from scipy.spatial import distance as dist
 from modules.config import camera_no
+import pyautogui
+import os
 
 
 labelsPath = "yolo-coco/coco.names"
@@ -133,6 +135,10 @@ while (cap.isOpened()):
         cv2.rectangle(image, (x, y), (x + w, y + h), color, 1)
         text = "Alert"
         cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
+        for j in range(0,len(nsd)):
+            sc = pyautogui.screenshot(f"screenshot{j}.png")
+            #sc.save(r'D:/DATA_ANALYSIS_PROJECTS/sign-language-gesture-recognition-master/Sign Language/screenshots/')
+            print("Screenshot saved")
 
     color = (138, 68, 38)
     if len(idxs) > 0:
