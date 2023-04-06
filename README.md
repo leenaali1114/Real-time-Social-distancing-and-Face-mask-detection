@@ -18,7 +18,7 @@ Social distancing and face mask detection sone in real time
     pip install imutils
     
  
- ## Download the pretrained models from the link below
+ ## Download the pretrained models from the link below to a folder named yolo-coco
     
     https://drive.google.com/drive/folders/1EWDxS1BPdoHJZfVAYvE9Cv46KmfXIy21?usp=share_link
   
